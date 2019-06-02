@@ -1,0 +1,120 @@
+
+:root{
+    --main-color: #eb2f06;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #efefef;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    margin-top: 5rem;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(10,10,10,.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#search{
+    padding: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 300px;
+    border-radius: 5px 0 0 5px;
+    font-size: 17px;
+}
+#search:focus{
+   border: 1px solid hsl(0, 100%, 70%);
+}
+.contentSearch i{
+    padding: 11px 15px;
+    border-radius:0 5px 5px 0;
+    color: #fff;
+    font-size: 18px;
+    background-color: var(--main-color);
+}
+.contentSearch{
+    display: flex;
+}
+/* - - - - -  - - -- - - CARDS - - - - -  -- -  - */
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+  }
+  .card-buy {
+    width: calc(33% - 1rem);
+    background-color:#fff;
+    margin-bottom: 20px;
+    min-height: 20rem;
+    border-radius: 5px;
+    margin-right: 1rem;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .2);
+  }
+  .card__img{
+    height: 180px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .card__img img  {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .card__txt{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    color: #444;
+    text-align: center;
+}
+.parrafo{
+    height: 100px;
+    overflow: hidden;
+    font-size: 15px;
+    padding: 5px;
+}
+.card-title{
+    font-size: 1.5em;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .btnCard{
+    display: flex;
+    justify-content: center;
+  }
+  .btn{
+    padding: 10px 0;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    background: none;
+    transition: all .2s ease; 
+    outline: none;
+    cursor:pointer;
+  }
+  .btn:hover{
+    color:  #fff;
+    background-color: var(--main-color);
+  }

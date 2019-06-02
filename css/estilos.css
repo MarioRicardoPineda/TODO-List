@@ -1,0 +1,139 @@
+:root{
+  --main-color: #78e08f;
+  --shadow: 0 5px 10px -3px rgba(50,50,50,.4);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+body{
+    font-family: 'Short Stack', cursive;
+    background-color: #efefef;
+}
+
+/* - - - - - - - Banner - - - - - - -  */
+.banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30vh;
+  font-size: 2em;
+  background-color: var(--main-color);
+  color: #fff;
+  box-shadow: var(--shadow);
+  margin-bottom: 40px;
+}
+
+/* - - - - - - - -  Campo de entrada de los productos - - - - - - - -  */
+.fieldList{
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+.fieldList input{
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 450px;
+  border: 1px solid #cecece;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1.1em;
+}
+.fieldList input:focus{
+  box-shadow: 0 0 2px 2px var(--main-color);
+}
+
+/* - - - - - - -  Error - - - - - - - */
+.error {
+  border: 1px solid #ee0000 !important;
+}
+.error::placeholder{
+  color: #ee0000;
+}
+
+/* - - - - - - - Boton de entrada - - - - - - - */
+.fieldList button{
+  display: block;
+  width: 250px;
+  font-size: 1.1em;
+  margin: 0 auto;
+  padding: 15px;
+  border:none;
+  outline: none;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  font-family: 'Short Stack';
+}
+
+.fieldList button:hover{
+  background-color: hsl(133, 50%, 67%);
+}
+
+.fieldList button::before{
+  content: "Pulse Enter";
+  position: absolute;
+  background-color: var(--main-color);
+  right: 0;
+  top: 6px;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all .4s ease;
+  z-index: -1;
+}
+.fieldList button:hover::before{
+  right: -140px;
+}
+
+
+/* - - - - - - - - -  Lista de los productos - - - - - - -  */
+
+.list{
+  width: 50%;
+  margin: 0 auto;
+  min-height: 30%;
+  background-color: hsl(38, 100%, 85%);
+  position: relative;
+}
+.list:before{
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 0;
+  transition: all .3s ;
+  background-image: linear-gradient(-135deg, #efefef 45%, #aaa 50%, #ccc 60%, #fff);
+}
+.list:hover::before{
+  width: 80px;
+  height: 80px;
+}
+.list_item{
+  list-style: none;
+}
+.list_item li{
+  padding: 10px;
+  border-bottom: 1px dotted rgba(30, 54, 153,.5);
+  display: flex;
+  justify-content: space-between;
+}
+
+.iconos{
+  font-size: 25px;
+  cursor:pointer;
+}
+.fa-trash-alt{
+  color: red;
+}
+.fa-address-book{
+  color: skyblue;
+}
+
